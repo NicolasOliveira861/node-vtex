@@ -9,6 +9,7 @@ import { LRUCache, Service } from "@vtex/api";
 
 import { Clients } from "./clients";
 import { AddressController } from "./handlers/address";
+import { CatalogController } from "./handlers/catalogController";
 import { CustomerInfo } from "./handlers/customerInfo";
 
 const catalogCache = new LRUCache<string, any>({ max: 3000 });
@@ -68,5 +69,6 @@ export default new Service({
     routes: {
         CustomerInfo: method({ GET: [CustomerInfo] }),
         Address: method({ GET: [AddressController] }),
+        Catalog: method({ GET: [CatalogController] }),
     },
 });

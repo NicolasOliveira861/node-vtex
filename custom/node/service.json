@@ -9,7 +9,7 @@
     "cpu": 30,
     "routes": {
         "CustomerInfo": {
-            "path": "/customersapi/customerinfo/fields:fields/where:where/",
+            "path": "/customersapi/customerinfo/:fields/:where/",
             "public": true,
             "policies": [
                 {
@@ -21,6 +21,17 @@
 
         "Address": {
             "path": "/addressapi/find/:fields/:where",
+            "public": true,
+            "policies": [
+                {
+                    "effect": "allow",
+                    "actions": ["GET"]
+                }
+            ]
+        },
+
+        "Catalog": {
+            "path": "/catalogapi/find/:productId",
             "public": true,
             "policies": [
                 {
