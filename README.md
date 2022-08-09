@@ -1,2 +1,3 @@
 # node-vtex
-Project developed to study Nodejs module in VTEX
+
+Project developed to study Nodejs module in VTEX IO

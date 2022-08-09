@@ -1,0 +1,33 @@
+{
+    "stack": "nodejs",
+    "memory": 1536,
+    "ttl": 43200,
+    "timeout": 7,
+    "minReplicas": 30,
+    "maxReplicas": 100,
+    "workers": 4,
+    "cpu": 30,
+    "routes": {
+        "CustomerInfo": {
+            "path": "/customersapi/customerinfo/fields:fields/where:where/",
+            "public": true,
+            "policies": [
+                {
+                    "effect": "allow",
+                    "actions": ["GET"]
+                }
+            ]
+        },
+
+        "Address": {
+            "path": "/addressapi/find/:fields/:where",
+            "public": true,
+            "policies": [
+                {
+                    "effect": "allow",
+                    "actions": ["GET"]
+                }
+            ]
+        }
+    }
+}

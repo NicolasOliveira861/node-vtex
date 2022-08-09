@@ -1,0 +1,234 @@
+{
+    "vendor": "agenciam3",
+    "name": "m3-custom",
+    "version": "0.0.1",
+    "title": "m3-custom",
+    "description": "m3-custom component",
+    "defaultLocale": "pt-BR",
+    "builders": {
+        "messages": "1.x",
+        "store": "0.x",
+        "react": "3.x",
+        "node": "6.x"
+    },
+    "dependencies": {
+        "vtex.styleguide": "9.x",
+        "vtex.css-handles": "0.x",
+        "vtex.native-types": "0.x",
+        "vtex.store-graphql": "2.x",
+        "vtex.search-graphql": "0.x",
+        "vtex.checkout-graphql": "0.x",
+        "vtex.order-manager": "0.x",
+        "vtex.checkout-resources": "0.x",
+        "vtex.product-context": "0.x",
+        "vtex.search-page-context": "0.x"
+    },
+    "policies": [
+        {
+            "name": "ADMIN_DS"
+        },
+        {
+            "name": "outbound-access",
+            "attrs": {
+                "host": "api.vtex.com",
+                "path": "/dataentities/*"
+            }
+        },
+        {
+            "name": "outbound-access",
+            "attrs": {
+                "host": "{{account}}.vtexcommercestable.com.br",
+                "path": "/api/checkout/pub/orders/*"
+            }
+        },
+        {
+            "name": "outbound-access",
+            "attrs": {
+                "host": "{{account}}.vtexcommercestable.com.br",
+                "path": "/api/logistics/pub/shipping/*"
+            }
+        },
+        {
+            "name": "outbound-access",
+            "attrs": {
+                "host": "vtexid.vtex.com.br",
+                "path": "/api/vtexid/pub/authentication/start"
+            }
+        },
+        {
+            "name": "outbound-access",
+            "attrs": {
+                "host": "vtexid.vtex.com.br",
+                "path": "/api/vtexid/pub/authentication/accesskey/*"
+            }
+        },
+        {
+            "name": "outbound-access",
+            "attrs": {
+                "host": "{{account}}.vtexpayments.com.br",
+                "path": "/api/pvt/sessions"
+            }
+        },
+        {
+            "name": "POWER_USER_DS"
+        },
+        {
+            "name": "LogisticsAdmin"
+        },
+        {
+            "name": "outbound-access",
+            "attrs": {
+                "host": "{{account}}.vtexcommercestable.com.br",
+                "path": "/api/license-manager/*"
+            }
+        },
+        {
+            "name": "Get_Account_By_Identifier"
+        },
+        {
+            "name": "outbound-access",
+            "attrs": {
+                "host": "licensemanager.vtex.com.br",
+                "path": "/api/pvt/accounts/*"
+            }
+        },
+        {
+            "name": "outbound-access",
+            "attrs": {
+                "host": "portal.vtexcommercestable.com.br",
+                "path": "/api/profile-system/*"
+            }
+        },
+        {
+            "name": "outbound-access",
+            "attrs": {
+                "host": "{{account}}.vtexcommercestable.com.br",
+                "path": "/api/oms/*"
+            }
+        },
+        {
+            "name": "outbound-access",
+            "attrs": {
+                "host": "{{account}}.myvtex.com",
+                "path": "/*"
+            }
+        },
+        {
+            "name": "outbound-access",
+            "attrs": {
+                "host": "portal.myvtex.com",
+                "path": "/api/sessions/*"
+            }
+        },
+        {
+            "name": "outbound-access",
+            "attrs": {
+                "host": "vtexid.vtex.com.br",
+                "path": "/api/vtexid/pub/authenticated/user"
+            }
+        },
+        {
+            "name": "outbound-access",
+            "attrs": {
+                "host": "vtexid.vtex.com.br",
+                "path": "/api/vtexid/pub/authentication/start"
+            }
+        },
+        {
+            "name": "outbound-access",
+            "attrs": {
+                "host": "vtexid.vtex.com.br",
+                "path": "/api/vtexid/pub/authentication/accesskey/*"
+            }
+        },
+        {
+            "name": "outbound-access",
+            "attrs": {
+                "host": "io.vtex.com.br",
+                "path": "/front-libs/self-service-reasons/*"
+            }
+        },
+        {
+            "name": "outbound-access",
+            "attrs": {
+                "host": "portal.vtexcommercestable.com.br",
+                "path": "/api/*"
+            }
+        },
+        {
+            "name": "outbound-access",
+            "attrs": {
+                "host": "www.datafrete.com.br",
+                "path": "/cellarvinhos/*"
+            }
+        },
+        {
+            "name": "outbound-access",
+            "attrs": {
+                "host": "portal.vtexcommercebeta.com.br",
+                "path": "/api/*"
+            }
+        },
+        {
+            "name": "outbound-access",
+            "attrs": {
+                "host": "{{account}}.vtexcommercestable.com.br",
+                "path": "/api/*"
+            }
+        },
+        {
+            "name": "outbound-access",
+            "attrs": {
+                "host": "conversationtracker.vtex.com.br",
+                "path": "/api/*"
+            }
+        },
+        {
+            "name": "outbound-access",
+            "attrs": {
+                "host": "portal.vtexcommercestable.com.br",
+                "path": "/api/oms/pvt/orders*"
+            }
+        },
+        {
+            "name": "outbound-access",
+            "attrs": {
+                "host": "portal.vtexcommercebeta.com.br",
+                "path": "/api/oms/pvt/orders*"
+            }
+        },
+        {
+            "name": "outbound-access",
+            "attrs": {
+                "host": "{{account}}.vtexcommercestable.com.br",
+                "path": "/api/oms/pvt/orders*"
+            }
+        },
+        {
+            "name": "outbound-access",
+            "attrs": {
+                "host": "conversationtracker.vtex.com.br",
+                "path": "/api/oms/pvt/orders*"
+            }
+        },
+        {
+            "name": "ManageStore"
+        },
+        {
+            "name": "OMSViewer"
+        },
+        {
+            "name": "colossus-fire-event"
+        },
+        {
+            "name": "colossus-write-logs"
+        },
+        {
+            "name": "ViewPayments"
+        },
+        {
+            "name": "vbase-read-write"
+        }
+    ],
+    "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}
