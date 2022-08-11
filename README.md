@@ -1,6 +1,6 @@
 # node-vtex
 
-Project developed to study Nodejs module in VTEX IO
+Projeto dedicado ao estudo de Node em VTEX IO
 
 <h2>Eventos: recebendo e lidando com eventos</h2>
 https://developers.vtex.com/vtex-developer-docs/docs/how-to-receive-catalog-changes-on-vtex-io
