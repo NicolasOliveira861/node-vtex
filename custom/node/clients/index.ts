@@ -1,6 +1,7 @@
 import { IOClients } from "@vtex/api";
 import { Catalog, OMS } from "@vtex/clients";
 import ProductAndSkus from "./catalog";
+import Promotions from "./promotions";
 
 import Status from "./status";
 
@@ -20,5 +21,9 @@ export class Clients extends IOClients {
 
     public get productAndSkus() {
         return this.getOrSet("productAndSkus", ProductAndSkus);
+    }
+
+    public get promotions() {
+        return this.getOrSet("promotions", Promotions);
     }
 }

@@ -20,12 +20,12 @@
         },
 
         "Address": {
-            "path": "/addressapi/find/:fields/:where",
+            "path": "/addressapi/create",
             "public": true,
             "policies": [
                 {
                     "effect": "allow",
-                    "actions": ["GET"]
+                    "actions": ["POST"]
                 }
             ]
         },

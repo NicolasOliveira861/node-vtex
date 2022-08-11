@@ -1,23 +1,21 @@
+import { json } from "co-body";
+
 export async function AddressController(
     ctx: Context,
     next: () => Promise<any>
 ) {
-    const { fields, where } = ctx.vtex.route.params;
+    const body = await json(ctx.req);
 
     try {
-        const req = await ctx.clients.masterdata.searchDocuments({
+        await ctx.clients.masterdata.createDocument({
             dataEntity: "AD",
-            fields: [fields as string],
-            pagination: { pageSize: 1, page: 1 },
-            where: `${where}`,
+            fields: body,
             schema: "v1",
         });
 
-        ctx.status = 200;
-        ctx.body = {
-            data: req,
-        };
+        ctx.status = 204;
     } catch (err) {
+        console.log(err);
         ctx.status = 500;
         ctx.body = {
             message: err?.data ?? "Error",

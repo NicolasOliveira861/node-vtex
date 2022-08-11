@@ -68,7 +68,7 @@ export default new Service({
     events: {},
     routes: {
         CustomerInfo: method({ GET: [CustomerInfo] }),
-        Address: method({ GET: [AddressController] }),
+        Address: method({ POST: [AddressController] }),
         Catalog: method({ GET: [CatalogController] }),
     },
 });
